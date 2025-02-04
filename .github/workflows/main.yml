@@ -7,9 +7,8 @@ on:
 
 jobs:
   build:
-  
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
@@ -41,4 +40,4 @@ jobs:
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           local-dir: build # Directory to upload (update based on your project structure)
-          server-dir: /public_html/your_project_folder # Hostinger directory
+          server-dir: /public_html # Hostinger directory
